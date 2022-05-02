@@ -71,23 +71,13 @@ class mywindow(QtWidgets.QMainWindow):
 
     
     def changeFormula(self):
-        n_minimum = [1, 100]
-        n_maximum = [99, 99999]
-        p_maximum = [1.0, 0.0099]
-        p_decimal = [2, 4]
-        p_step = [0.01, 0.0001]
-        restriction = "%d ≤ n ≤ %d, %g ≤ p ≤ %g"
+        n_minimum = [1, 500]
+        restriction = "%d ≤ n"
 
         formula = self.ui.formulaType.currentIndex()
         self.ui.formula_img.setPixmap(QPixmap("img/" + str(formula) + ".png"))
         self.ui.n_spinBox.setMinimum(n_minimum[formula])
-        self.ui.n_spinBox.setMaximum(n_maximum[formula])
-        self.ui.n_spinBox.setValue(n_minimum[formula])
-        self.ui.p_spinBox.setMaximum(p_maximum[formula])
-        self.ui.p_spinBox.setDecimals(p_decimal[formula])
-        self.ui.p_spinBox.setSingleStep(p_step[formula])
-        self.ui.p_spinBox.setValue(0)
-        restriction = restriction % (n_minimum[formula], n_maximum[formula], p_step[formula], p_maximum[formula])
+        restriction = restriction % (n_minimum[formula])
         self.ui.restriction_label.setText(restriction)
 
 

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\varfolomey\Desktop\terver_lab3\ui.ui'
+# Form implementation generated from reading ui file 'C:\Users\varfolomey\Desktop\terver_lab3_bernoulli_poisson\ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -113,8 +113,9 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.p_spinBox.setFont(font)
-        self.p_spinBox.setDecimals(8)
+        self.p_spinBox.setDecimals(4)
         self.p_spinBox.setMaximum(1.0)
+        self.p_spinBox.setSingleStep(0.001)
         self.p_spinBox.setObjectName("p_spinBox")
         self.gridLayout.addWidget(self.p_spinBox, 3, 1, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
